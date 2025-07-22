@@ -45,6 +45,18 @@ class SpriteImage_PropellerBlock(SLib.SpriteImage_Static):  # 724
     def loadImages():
         SLib.loadIfNotInImageCache('blockflye', 'block_fly.png')
         
+class SpriteImage_GlwBlock(SLib.SpriteImage_Static):  # 724
+    def __init__(self, parent):
+        super().__init__(
+            parent,
+            3.75,
+            ImageCache['blockglowe'],
+            (0, 0),
+        )
+
+    def loadImages():
+        SLib.loadIfNotInImageCache('blockglowe', 'glow_block.png')
+
 class SpriteImage_Crowber(SLib.SpriteImage_Static):  # 724
     def __init__(self, parent):
         super().__init__(
@@ -220,5 +232,6 @@ ImageClasses = {
     345: SpriteImage_TiltGirder,
     202: SpriteImage_PropellerBlock,
     529: SpriteImage_Crowber,
+    199: SpriteImage_GlwBlock,
     522: SpriteImage_LiftTaru
 }
