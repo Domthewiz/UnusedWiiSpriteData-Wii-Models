@@ -1,5 +1,7 @@
 # UnusedWiiSpriteData-Wii-Models
 A patch for the [Miyamoto! NSMBU level editor](https://github.com/aboood40091/Miyamoto) that adds on to the unused wii actors.
+
+New actor files for sprites 358 and 360.!!!
 <br><br>
 <img width="1418" height="572" alt="image" src="https://github.com/user-attachments/assets/edaa3cd8-2688-4981-84d2-65d9c06a36b2" />
 <br>
