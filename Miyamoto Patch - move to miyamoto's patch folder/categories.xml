@@ -11,6 +11,7 @@
       <attach sprite="360"/>
       <attach sprite="358"/>
       <attach sprite="522"/>
+	  <attach sprite="377"/>
     </category>
   </view>
 </views>
