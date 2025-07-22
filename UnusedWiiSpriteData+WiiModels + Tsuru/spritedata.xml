@@ -1,0 +1,961 @@
+<?xml version="1.0"?>
+<sprites>
+<sprite id="44" name="Red Coin Ring" notes="Red coins appear when a player jumps through this ring. Its prime use is to spawn red coins. When you collect all 8 red coins you will get a powerup.">
+		<value nybble="3-4" title="Target Event ID" comment="Use this to link the red ring with the red coins it spawns."/>
+		<list nybble="11" title="Reward" comment="This determines the powerup reward given when Mario is small or super. (* This WILL crash if you're small...but only in NSLU) ">
+			<entry value="0">Fire flower</entry>
+			<entry value="1">Propeller Mushroom</entry>
+			<entry value="2">Penguin suit</entry>
+			<entry value="3">Ice flower</entry>
+			<entry value="4">Acorn mushroom</entry>
+			<entry value="5">1-Up*</entry>
+			<entry value="6">Super Mushroom</entry>
+			<entry value="7">Super Mushroom</entry>
+		</list>
+		<checkbox nybble="12" title="Shift 1/2 block to the right" comment="This shifts the coin ring 1/2 block to the right."/>
+		<value nybble="14-20" title="Active Time" comment="Default value is 60"/>
+	</sprite>
+    <sprite id="198" name="Colored Particles">
+        <value nybble="5-6" title="Inner Red Value"/>
+        <value nybble="7-8" title="Inner Green Value"/>
+        <value nybble="9-10" title="Inner Blue Value"/>
+        <value nybble="11-12" title="Inner Alpha Value"/>
+        <value nybble="13-14" title="Outer Red Value"/>
+        <value nybble="15-16" title="Outer Green Value"/>
+        <value nybble="17-18" title="Outer Blue Value"/>
+        <value nybble="19-20" title="Outer Alpha Value"/>
+    </sprite>
+	<sprite id="402" name="Green Coin Ring" notes="Gives you a chance to get a powerup.">
+		<value nybble="3-4" title="Target Event ID" comment="Use this to assign green coins to this sprite."/>
+		<value nybble="5" title="Unknown Value 5"/>
+		<list nybble="11" title="Reward">
+			<entry value="0">Fire Flower</entry>
+			<entry value="1">Propeller</entry>
+			<entry value="2">Penguin</entry>
+			<entry value="3">Ice Flower</entry>
+			<entry value="4">Acorn</entry>
+			<entry value="5">Penguin</entry>
+			<entry value="6">Penguin</entry>
+			<entry value="7">Penguin</entry>
+			<entry value="8">Penguin</entry>
+			<entry value="9">Penguin</entry>
+			<entry value="10">Penguin</entry>
+			<entry value="11">Penguin</entry>
+			<entry value="12">Penguin</entry>
+			<entry value="13">Penguin</entry>
+			<entry value="14">Ice Flower</entry>
+			<entry value="15">Penguin</entry>
+		</list>
+		<checkbox nybble="12" title="Shift 1/2 block to the right" comment="This shifts the coin ring 1/2 block to the right."/>
+		<value nybble="14-20" title="Active Time" comment="Default value is 24"/>
+	</sprite>
+    <sprite id="724" name="Actor Spawner">
+        <value nybble="1-2" title="Triggering Event ID"/>
+        <list bit="81-82" title="Usage Mode">
+            <entry value="0">Multi Use</entry>
+            <entry value="1">Single Use</entry>
+            <entry value="2">Despawn When Event is Deactivated</entry>
+            <entry value="3">Only Appear While Event is Active</entry>
+        </list>
+        <checkbox bit="83" title="Use Nybbles 21-24" comment="Nybbles 15-18 are used if unchecked"/>
+        <list bit="84" title="ID Type">
+            <entry value="0">Profile ID</entry>
+            <entry value="1">Sprite ID</entry>
+        </list>
+        <value nybble="22-24" title="ID"/>
+        <value nybble="3" title="Child Event ID 1 (Nybble 2)"/>
+        <value nybble="4" title="Child Event ID 2 (Nybble 4)"/>
+        <value nybble="5" title="Child Nybble 5"/>
+        <value nybble="6" title="Child Nybble 6"/>
+        <value nybble="7" title="Child Nybble 7"/>
+        <value nybble="8" title="Child Nybble 8"/>
+        <value nybble="9" title="Child Nybble 9"/>
+        <value nybble="10" title="Child Nybble 10"/>
+        <value nybble="11" title="Child Nybble 11"/>
+        <value nybble="12" title="Child Nybble 12"/>
+        <value nybble="13" title="Child Nybble 13"/>
+        <value nybble="14" title="Child Nybble 14"/>
+        <value nybble="15" title="Child Nybble 15/21"/>
+        <value nybble="16" title="Child Nybble 16/22"/>
+        <value nybble="17" title="Child Nybble 17/23"/>
+        <value nybble="18" title="Child Nybble 18/24"/>
+        <value nybble="19" title="Child Nybble 19"/>
+        <value nybble="20" title="Child Nybble 20"/>
+    </sprite>
+    <sprite id="725" name="Para-Bones">
+        <value nybble="5" title="Fly Distance" comment="In tiles"/>
+        <value nybble="6" title="Idling Time" comment="In half seconds"/>
+        <checkbox nybble="7" title="Start Rising" comment="Starts lowering if disabled"/>
+        <checkbox nybble="8" title="Horizontal" comment="Moves vertically if disabled"/>
+    </sprite>
+    <sprite id="726" name="Custom Door (unfinished)" notes="Inherits DoorBase nybbles.">
+        <checkbox nybble="5" title="Z-Order" comment="Makes the sprite appear behind Layer 1"/>
+        <checkbox nybble="6" title="Doesn't appear in challenges" comment="When checked, the door does not appear in challenges"/>
+    </sprite>
+    <sprite id="727" name="Fake Actor">
+        <list nybble="12" title="Type">
+            <entry value="0">Checkpoint</entry>
+            <entry value="1">Goal Pole</entry>
+            <entry value="2">Star Coin</entry>
+        </list>
+        <checkbox nybble="5" title="Debug Mode" comment="Prevents fake actor from despawning when triggered"/>
+    </sprite>
+    <sprite id="728" name="P Acorn">
+        <list nybble="6" title="Spawn Type">
+            <entry value="6">Red Coin Reward</entry>
+        </list>
+    </sprite>
+    <sprite id="729" name="Star Coin Shard">
+        <value nybble="1" title="Manager ID"/>
+    </sprite>
+    <sprite id="730" name="Beep Block">
+        <list nybble="1" title="Color">
+            <entry value="0">Red</entry>
+            <entry value="1">Blue</entry>
+        </list>
+    </sprite>
+    <sprite id="731" name="Falling Chestnut"></sprite>
+    <sprite id="732" name="Task Changer" notes="! Unfinished"></sprite>
+    <sprite id="733" name="Cataquack" notes="! Unfinished + Requires model"></sprite>
+    <sprite id="734" name="Time Clock" notes="Adds or removes time from the timer when collected">
+        <value nybble="10-12" title="Time Amount"/>
+        <checkbox nybble="5" title="Remove Time" comment="Time Amount will be treated as a negative number"/>
+    </sprite>
+    <sprite id="735" name="Red/Blue Block" notes="Block which is active during a specific switch block color">
+        <list nybble="1" title="Color">
+            <entry value="0">Red</entry>
+            <entry value="1">Blue</entry>
+        </list>
+    </sprite>
+    <sprite id="736" name="Jumbo Ray (Unfinished)"></sprite>
+    <sprite id="737" name="Particle Effect Spawner">
+        <value nybble="1-3" title="Effect ID"/>
+        <value nybble="4" title="Triggering Event ID"/>
+    </sprite>
+    <sprite id="738" name="Rainbow Light" notes="A configurable colorful light source">
+        <list nybble="1" title="Color">
+            <entry value="0">Red</entry>
+            <entry value="1">Orange</entry>
+            <entry value="2">Yellow</entry>
+            <entry value="3">Green</entry>
+            <entry value="4">Cyan</entry>
+            <entry value="5">Blue</entry>
+            <entry value="6">White</entry>
+        </list>
+        <value nybble="2" title="Intensity"/>
+    </sprite>
+    <sprite id="739" name="Sound Effect Spawner">
+        <value nybble="1-3" title="SFX ID"/>
+        <value nybble="4" title="Triggering Event ID"/>
+    </sprite>
+    <sprite id="740" name="Debug Actor" notes="Actor useful for debugging various things"></sprite>
+    <sprite id="741" name="Liquid Overlay">
+        <value nybble="5" title="Location ID"/>
+        <list nybble="6" title="Collision Type">
+            <entry value="0">Cold</entry>
+            <entry value="1">Electric</entry>
+            <entry value="2">Toxic</entry>
+            <entry value="3">Hot</entry>
+            <entry value="4">Left Current</entry>
+            <entry value="5">Right Current</entry>
+        </list>
+    </sprite>
+    <sprite id="742" name="Stingby"></sprite>
+    <sprite id="743" name="Kamiya" notes="A little mini-boss thing, partly unfinished. Make sure to also place Koopa Troopa, Para-Goomba and Mini Goomba sprites somewhere in the level's Area as well."></sprite>
+    <sprite id="744" name="Model Loader" notes="Loads any model.">
+        <value nybble="5-6" title="Model Filename String Bank ID"/>
+        <value nybble="7-8" title="Model Name String Bank ID"/>
+    </sprite>
+    <sprite id="745" name="String Bank" notes="Stores an arbitrary 16 character string to be used by other sprites, uses Initial State as ID. Use layer setting for chaining (Layer 1 = Standalone string/First string of chain, Layer 2 = Second string of chain, Layer 0 = Last string of chain) for up to 48 characters.">
+        <list bit="1-6" title="Char 1">
+            <entry value="0">NULL</entry><entry value="1">a</entry><entry value="2">b</entry><entry value="3">c</entry>
+            <entry value="4">d</entry><entry value="5">e</entry><entry value="6">f</entry><entry value="7">g</entry>
+            <entry value="8">h</entry><entry value="9">i</entry><entry value="10">j</entry><entry value="11">k</entry>
+            <entry value="12">l</entry><entry value="13">m</entry><entry value="14">n</entry><entry value="15">o</entry>
+            <entry value="16">p</entry><entry value="17">q</entry><entry value="18">r</entry><entry value="19">s</entry>
+            <entry value="20">t</entry><entry value="21">u</entry><entry value="22">v</entry><entry value="23">w</entry>
+            <entry value="24">x</entry><entry value="25">y</entry><entry value="26">z</entry><entry value="27">0</entry>
+            <entry value="28">1</entry><entry value="29">2</entry><entry value="30">3</entry><entry value="31">4</entry>
+            <entry value="32">5</entry><entry value="33">A</entry><entry value="34">B</entry><entry value="35">C</entry>
+            <entry value="36">D</entry><entry value="37">E</entry><entry value="38">F</entry><entry value="39">G</entry>
+            <entry value="40">H</entry><entry value="41">I</entry><entry value="42">J</entry><entry value="43">K</entry>
+            <entry value="44">L</entry><entry value="45">M</entry><entry value="46">N</entry><entry value="47">O</entry>
+            <entry value="48">P</entry><entry value="49">Q</entry><entry value="50">R</entry><entry value="51">S</entry>
+            <entry value="52">T</entry><entry value="53">U</entry><entry value="54">V</entry><entry value="55">W</entry>
+            <entry value="56">X</entry><entry value="57">Y</entry><entry value="58">Z</entry><entry value="59">6</entry>
+            <entry value="60">7</entry><entry value="61">8</entry><entry value="62">9</entry><entry value="63">_</entry>
+        </list>
+        <list bit="7-12" title="Char 2">
+            <entry value="0">NULL</entry><entry value="1">a</entry><entry value="2">b</entry><entry value="3">c</entry>
+            <entry value="4">d</entry><entry value="5">e</entry><entry value="6">f</entry><entry value="7">g</entry>
+            <entry value="8">h</entry><entry value="9">i</entry><entry value="10">j</entry><entry value="11">k</entry>
+            <entry value="12">l</entry><entry value="13">m</entry><entry value="14">n</entry><entry value="15">o</entry>
+            <entry value="16">p</entry><entry value="17">q</entry><entry value="18">r</entry><entry value="19">s</entry>
+            <entry value="20">t</entry><entry value="21">u</entry><entry value="22">v</entry><entry value="23">w</entry>
+            <entry value="24">x</entry><entry value="25">y</entry><entry value="26">z</entry><entry value="27">0</entry>
+            <entry value="28">1</entry><entry value="29">2</entry><entry value="30">3</entry><entry value="31">4</entry>
+            <entry value="32">5</entry><entry value="33">A</entry><entry value="34">B</entry><entry value="35">C</entry>
+            <entry value="36">D</entry><entry value="37">E</entry><entry value="38">F</entry><entry value="39">G</entry>
+            <entry value="40">H</entry><entry value="41">I</entry><entry value="42">J</entry><entry value="43">K</entry>
+            <entry value="44">L</entry><entry value="45">M</entry><entry value="46">N</entry><entry value="47">O</entry>
+            <entry value="48">P</entry><entry value="49">Q</entry><entry value="50">R</entry><entry value="51">S</entry>
+            <entry value="52">T</entry><entry value="53">U</entry><entry value="54">V</entry><entry value="55">W</entry>
+            <entry value="56">X</entry><entry value="57">Y</entry><entry value="58">Z</entry><entry value="59">6</entry>
+            <entry value="60">7</entry><entry value="61">8</entry><entry value="62">9</entry><entry value="63">_</entry>
+        </list>
+        <list bit="13-18" title="Char 3">
+            <entry value="0">NULL</entry><entry value="1">a</entry><entry value="2">b</entry><entry value="3">c</entry>
+            <entry value="4">d</entry><entry value="5">e</entry><entry value="6">f</entry><entry value="7">g</entry>
+            <entry value="8">h</entry><entry value="9">i</entry><entry value="10">j</entry><entry value="11">k</entry>
+            <entry value="12">l</entry><entry value="13">m</entry><entry value="14">n</entry><entry value="15">o</entry>
+            <entry value="16">p</entry><entry value="17">q</entry><entry value="18">r</entry><entry value="19">s</entry>
+            <entry value="20">t</entry><entry value="21">u</entry><entry value="22">v</entry><entry value="23">w</entry>
+            <entry value="24">x</entry><entry value="25">y</entry><entry value="26">z</entry><entry value="27">0</entry>
+            <entry value="28">1</entry><entry value="29">2</entry><entry value="30">3</entry><entry value="31">4</entry>
+            <entry value="32">5</entry><entry value="33">A</entry><entry value="34">B</entry><entry value="35">C</entry>
+            <entry value="36">D</entry><entry value="37">E</entry><entry value="38">F</entry><entry value="39">G</entry>
+            <entry value="40">H</entry><entry value="41">I</entry><entry value="42">J</entry><entry value="43">K</entry>
+            <entry value="44">L</entry><entry value="45">M</entry><entry value="46">N</entry><entry value="47">O</entry>
+            <entry value="48">P</entry><entry value="49">Q</entry><entry value="50">R</entry><entry value="51">S</entry>
+            <entry value="52">T</entry><entry value="53">U</entry><entry value="54">V</entry><entry value="55">W</entry>
+            <entry value="56">X</entry><entry value="57">Y</entry><entry value="58">Z</entry><entry value="59">6</entry>
+            <entry value="60">7</entry><entry value="61">8</entry><entry value="62">9</entry><entry value="63">_</entry>
+        </list>
+        <list bit="19-24" title="Char 4">
+            <entry value="0">NULL</entry><entry value="1">a</entry><entry value="2">b</entry><entry value="3">c</entry>
+            <entry value="4">d</entry><entry value="5">e</entry><entry value="6">f</entry><entry value="7">g</entry>
+            <entry value="8">h</entry><entry value="9">i</entry><entry value="10">j</entry><entry value="11">k</entry>
+            <entry value="12">l</entry><entry value="13">m</entry><entry value="14">n</entry><entry value="15">o</entry>
+            <entry value="16">p</entry><entry value="17">q</entry><entry value="18">r</entry><entry value="19">s</entry>
+            <entry value="20">t</entry><entry value="21">u</entry><entry value="22">v</entry><entry value="23">w</entry>
+            <entry value="24">x</entry><entry value="25">y</entry><entry value="26">z</entry><entry value="27">0</entry>
+            <entry value="28">1</entry><entry value="29">2</entry><entry value="30">3</entry><entry value="31">4</entry>
+            <entry value="32">5</entry><entry value="33">A</entry><entry value="34">B</entry><entry value="35">C</entry>
+            <entry value="36">D</entry><entry value="37">E</entry><entry value="38">F</entry><entry value="39">G</entry>
+            <entry value="40">H</entry><entry value="41">I</entry><entry value="42">J</entry><entry value="43">K</entry>
+            <entry value="44">L</entry><entry value="45">M</entry><entry value="46">N</entry><entry value="47">O</entry>
+            <entry value="48">P</entry><entry value="49">Q</entry><entry value="50">R</entry><entry value="51">S</entry>
+            <entry value="52">T</entry><entry value="53">U</entry><entry value="54">V</entry><entry value="55">W</entry>
+            <entry value="56">X</entry><entry value="57">Y</entry><entry value="58">Z</entry><entry value="59">6</entry>
+            <entry value="60">7</entry><entry value="61">8</entry><entry value="62">9</entry><entry value="63">_</entry>
+        </list>
+        <list bit="25-30" title="Char 5">
+            <entry value="0">NULL</entry><entry value="1">a</entry><entry value="2">b</entry><entry value="3">c</entry>
+            <entry value="4">d</entry><entry value="5">e</entry><entry value="6">f</entry><entry value="7">g</entry>
+            <entry value="8">h</entry><entry value="9">i</entry><entry value="10">j</entry><entry value="11">k</entry>
+            <entry value="12">l</entry><entry value="13">m</entry><entry value="14">n</entry><entry value="15">o</entry>
+            <entry value="16">p</entry><entry value="17">q</entry><entry value="18">r</entry><entry value="19">s</entry>
+            <entry value="20">t</entry><entry value="21">u</entry><entry value="22">v</entry><entry value="23">w</entry>
+            <entry value="24">x</entry><entry value="25">y</entry><entry value="26">z</entry><entry value="27">0</entry>
+            <entry value="28">1</entry><entry value="29">2</entry><entry value="30">3</entry><entry value="31">4</entry>
+            <entry value="32">5</entry><entry value="33">A</entry><entry value="34">B</entry><entry value="35">C</entry>
+            <entry value="36">D</entry><entry value="37">E</entry><entry value="38">F</entry><entry value="39">G</entry>
+            <entry value="40">H</entry><entry value="41">I</entry><entry value="42">J</entry><entry value="43">K</entry>
+            <entry value="44">L</entry><entry value="45">M</entry><entry value="46">N</entry><entry value="47">O</entry>
+            <entry value="48">P</entry><entry value="49">Q</entry><entry value="50">R</entry><entry value="51">S</entry>
+            <entry value="52">T</entry><entry value="53">U</entry><entry value="54">V</entry><entry value="55">W</entry>
+            <entry value="56">X</entry><entry value="57">Y</entry><entry value="58">Z</entry><entry value="59">6</entry>
+            <entry value="60">7</entry><entry value="61">8</entry><entry value="62">9</entry><entry value="63">_</entry>
+        </list>
+        <list bit="31-36" title="Char 6">
+            <entry value="0">NULL</entry><entry value="1">a</entry><entry value="2">b</entry><entry value="3">c</entry>
+            <entry value="4">d</entry><entry value="5">e</entry><entry value="6">f</entry><entry value="7">g</entry>
+            <entry value="8">h</entry><entry value="9">i</entry><entry value="10">j</entry><entry value="11">k</entry>
+            <entry value="12">l</entry><entry value="13">m</entry><entry value="14">n</entry><entry value="15">o</entry>
+            <entry value="16">p</entry><entry value="17">q</entry><entry value="18">r</entry><entry value="19">s</entry>
+            <entry value="20">t</entry><entry value="21">u</entry><entry value="22">v</entry><entry value="23">w</entry>
+            <entry value="24">x</entry><entry value="25">y</entry><entry value="26">z</entry><entry value="27">0</entry>
+            <entry value="28">1</entry><entry value="29">2</entry><entry value="30">3</entry><entry value="31">4</entry>
+            <entry value="32">5</entry><entry value="33">A</entry><entry value="34">B</entry><entry value="35">C</entry>
+            <entry value="36">D</entry><entry value="37">E</entry><entry value="38">F</entry><entry value="39">G</entry>
+            <entry value="40">H</entry><entry value="41">I</entry><entry value="42">J</entry><entry value="43">K</entry>
+            <entry value="44">L</entry><entry value="45">M</entry><entry value="46">N</entry><entry value="47">O</entry>
+            <entry value="48">P</entry><entry value="49">Q</entry><entry value="50">R</entry><entry value="51">S</entry>
+            <entry value="52">T</entry><entry value="53">U</entry><entry value="54">V</entry><entry value="55">W</entry>
+            <entry value="56">X</entry><entry value="57">Y</entry><entry value="58">Z</entry><entry value="59">6</entry>
+            <entry value="60">7</entry><entry value="61">8</entry><entry value="62">9</entry><entry value="63">_</entry>
+        </list>
+        <list bit="37-42" title="Char 7">
+            <entry value="0">NULL</entry><entry value="1">a</entry><entry value="2">b</entry><entry value="3">c</entry>
+            <entry value="4">d</entry><entry value="5">e</entry><entry value="6">f</entry><entry value="7">g</entry>
+            <entry value="8">h</entry><entry value="9">i</entry><entry value="10">j</entry><entry value="11">k</entry>
+            <entry value="12">l</entry><entry value="13">m</entry><entry value="14">n</entry><entry value="15">o</entry>
+            <entry value="16">p</entry><entry value="17">q</entry><entry value="18">r</entry><entry value="19">s</entry>
+            <entry value="20">t</entry><entry value="21">u</entry><entry value="22">v</entry><entry value="23">w</entry>
+            <entry value="24">x</entry><entry value="25">y</entry><entry value="26">z</entry><entry value="27">0</entry>
+            <entry value="28">1</entry><entry value="29">2</entry><entry value="30">3</entry><entry value="31">4</entry>
+            <entry value="32">5</entry><entry value="33">A</entry><entry value="34">B</entry><entry value="35">C</entry>
+            <entry value="36">D</entry><entry value="37">E</entry><entry value="38">F</entry><entry value="39">G</entry>
+            <entry value="40">H</entry><entry value="41">I</entry><entry value="42">J</entry><entry value="43">K</entry>
+            <entry value="44">L</entry><entry value="45">M</entry><entry value="46">N</entry><entry value="47">O</entry>
+            <entry value="48">P</entry><entry value="49">Q</entry><entry value="50">R</entry><entry value="51">S</entry>
+            <entry value="52">T</entry><entry value="53">U</entry><entry value="54">V</entry><entry value="55">W</entry>
+            <entry value="56">X</entry><entry value="57">Y</entry><entry value="58">Z</entry><entry value="59">6</entry>
+            <entry value="60">7</entry><entry value="61">8</entry><entry value="62">9</entry><entry value="63">_</entry>
+        </list>
+        <list bit="43-48" title="Char 8">
+            <entry value="0">NULL</entry><entry value="1">a</entry><entry value="2">b</entry><entry value="3">c</entry>
+            <entry value="4">d</entry><entry value="5">e</entry><entry value="6">f</entry><entry value="7">g</entry>
+            <entry value="8">h</entry><entry value="9">i</entry><entry value="10">j</entry><entry value="11">k</entry>
+            <entry value="12">l</entry><entry value="13">m</entry><entry value="14">n</entry><entry value="15">o</entry>
+            <entry value="16">p</entry><entry value="17">q</entry><entry value="18">r</entry><entry value="19">s</entry>
+            <entry value="20">t</entry><entry value="21">u</entry><entry value="22">v</entry><entry value="23">w</entry>
+            <entry value="24">x</entry><entry value="25">y</entry><entry value="26">z</entry><entry value="27">0</entry>
+            <entry value="28">1</entry><entry value="29">2</entry><entry value="30">3</entry><entry value="31">4</entry>
+            <entry value="32">5</entry><entry value="33">A</entry><entry value="34">B</entry><entry value="35">C</entry>
+            <entry value="36">D</entry><entry value="37">E</entry><entry value="38">F</entry><entry value="39">G</entry>
+            <entry value="40">H</entry><entry value="41">I</entry><entry value="42">J</entry><entry value="43">K</entry>
+            <entry value="44">L</entry><entry value="45">M</entry><entry value="46">N</entry><entry value="47">O</entry>
+            <entry value="48">P</entry><entry value="49">Q</entry><entry value="50">R</entry><entry value="51">S</entry>
+            <entry value="52">T</entry><entry value="53">U</entry><entry value="54">V</entry><entry value="55">W</entry>
+            <entry value="56">X</entry><entry value="57">Y</entry><entry value="58">Z</entry><entry value="59">6</entry>
+            <entry value="60">7</entry><entry value="61">8</entry><entry value="62">9</entry><entry value="63">_</entry>
+        </list>
+        <list bit="49-54" title="Char 9">
+            <entry value="0">NULL</entry><entry value="1">a</entry><entry value="2">b</entry><entry value="3">c</entry>
+            <entry value="4">d</entry><entry value="5">e</entry><entry value="6">f</entry><entry value="7">g</entry>
+            <entry value="8">h</entry><entry value="9">i</entry><entry value="10">j</entry><entry value="11">k</entry>
+            <entry value="12">l</entry><entry value="13">m</entry><entry value="14">n</entry><entry value="15">o</entry>
+            <entry value="16">p</entry><entry value="17">q</entry><entry value="18">r</entry><entry value="19">s</entry>
+            <entry value="20">t</entry><entry value="21">u</entry><entry value="22">v</entry><entry value="23">w</entry>
+            <entry value="24">x</entry><entry value="25">y</entry><entry value="26">z</entry><entry value="27">0</entry>
+            <entry value="28">1</entry><entry value="29">2</entry><entry value="30">3</entry><entry value="31">4</entry>
+            <entry value="32">5</entry><entry value="33">A</entry><entry value="34">B</entry><entry value="35">C</entry>
+            <entry value="36">D</entry><entry value="37">E</entry><entry value="38">F</entry><entry value="39">G</entry>
+            <entry value="40">H</entry><entry value="41">I</entry><entry value="42">J</entry><entry value="43">K</entry>
+            <entry value="44">L</entry><entry value="45">M</entry><entry value="46">N</entry><entry value="47">O</entry>
+            <entry value="48">P</entry><entry value="49">Q</entry><entry value="50">R</entry><entry value="51">S</entry>
+            <entry value="52">T</entry><entry value="53">U</entry><entry value="54">V</entry><entry value="55">W</entry>
+            <entry value="56">X</entry><entry value="57">Y</entry><entry value="58">Z</entry><entry value="59">6</entry>
+            <entry value="60">7</entry><entry value="61">8</entry><entry value="62">9</entry><entry value="63">_</entry>
+        </list>
+        <list bit="55-60" title="Char 10">
+            <entry value="0">NULL</entry><entry value="1">a</entry><entry value="2">b</entry><entry value="3">c</entry>
+            <entry value="4">d</entry><entry value="5">e</entry><entry value="6">f</entry><entry value="7">g</entry>
+            <entry value="8">h</entry><entry value="9">i</entry><entry value="10">j</entry><entry value="11">k</entry>
+            <entry value="12">l</entry><entry value="13">m</entry><entry value="14">n</entry><entry value="15">o</entry>
+            <entry value="16">p</entry><entry value="17">q</entry><entry value="18">r</entry><entry value="19">s</entry>
+            <entry value="20">t</entry><entry value="21">u</entry><entry value="22">v</entry><entry value="23">w</entry>
+            <entry value="24">x</entry><entry value="25">y</entry><entry value="26">z</entry><entry value="27">0</entry>
+            <entry value="28">1</entry><entry value="29">2</entry><entry value="30">3</entry><entry value="31">4</entry>
+            <entry value="32">5</entry><entry value="33">A</entry><entry value="34">B</entry><entry value="35">C</entry>
+            <entry value="36">D</entry><entry value="37">E</entry><entry value="38">F</entry><entry value="39">G</entry>
+            <entry value="40">H</entry><entry value="41">I</entry><entry value="42">J</entry><entry value="43">K</entry>
+            <entry value="44">L</entry><entry value="45">M</entry><entry value="46">N</entry><entry value="47">O</entry>
+            <entry value="48">P</entry><entry value="49">Q</entry><entry value="50">R</entry><entry value="51">S</entry>
+            <entry value="52">T</entry><entry value="53">U</entry><entry value="54">V</entry><entry value="55">W</entry>
+            <entry value="56">X</entry><entry value="57">Y</entry><entry value="58">Z</entry><entry value="59">6</entry>
+            <entry value="60">7</entry><entry value="61">8</entry><entry value="62">9</entry><entry value="63">_</entry>
+        </list>
+        <list bit="61-66" title="Char 11">
+            <entry value="0">NULL</entry><entry value="1">a</entry><entry value="2">b</entry><entry value="3">c</entry>
+            <entry value="4">d</entry><entry value="5">e</entry><entry value="6">f</entry><entry value="7">g</entry>
+            <entry value="8">h</entry><entry value="9">i</entry><entry value="10">j</entry><entry value="11">k</entry>
+            <entry value="12">l</entry><entry value="13">m</entry><entry value="14">n</entry><entry value="15">o</entry>
+            <entry value="16">p</entry><entry value="17">q</entry><entry value="18">r</entry><entry value="19">s</entry>
+            <entry value="20">t</entry><entry value="21">u</entry><entry value="22">v</entry><entry value="23">w</entry>
+            <entry value="24">x</entry><entry value="25">y</entry><entry value="26">z</entry><entry value="27">0</entry>
+            <entry value="28">1</entry><entry value="29">2</entry><entry value="30">3</entry><entry value="31">4</entry>
+            <entry value="32">5</entry><entry value="33">A</entry><entry value="34">B</entry><entry value="35">C</entry>
+            <entry value="36">D</entry><entry value="37">E</entry><entry value="38">F</entry><entry value="39">G</entry>
+            <entry value="40">H</entry><entry value="41">I</entry><entry value="42">J</entry><entry value="43">K</entry>
+            <entry value="44">L</entry><entry value="45">M</entry><entry value="46">N</entry><entry value="47">O</entry>
+            <entry value="48">P</entry><entry value="49">Q</entry><entry value="50">R</entry><entry value="51">S</entry>
+            <entry value="52">T</entry><entry value="53">U</entry><entry value="54">V</entry><entry value="55">W</entry>
+            <entry value="56">X</entry><entry value="57">Y</entry><entry value="58">Z</entry><entry value="59">6</entry>
+            <entry value="60">7</entry><entry value="61">8</entry><entry value="62">9</entry><entry value="63">_</entry>
+        </list>
+        <list bit="67-72" title="Char 12">
+            <entry value="0">NULL</entry><entry value="1">a</entry><entry value="2">b</entry><entry value="3">c</entry>
+            <entry value="4">d</entry><entry value="5">e</entry><entry value="6">f</entry><entry value="7">g</entry>
+            <entry value="8">h</entry><entry value="9">i</entry><entry value="10">j</entry><entry value="11">k</entry>
+            <entry value="12">l</entry><entry value="13">m</entry><entry value="14">n</entry><entry value="15">o</entry>
+            <entry value="16">p</entry><entry value="17">q</entry><entry value="18">r</entry><entry value="19">s</entry>
+            <entry value="20">t</entry><entry value="21">u</entry><entry value="22">v</entry><entry value="23">w</entry>
+            <entry value="24">x</entry><entry value="25">y</entry><entry value="26">z</entry><entry value="27">0</entry>
+            <entry value="28">1</entry><entry value="29">2</entry><entry value="30">3</entry><entry value="31">4</entry>
+            <entry value="32">5</entry><entry value="33">A</entry><entry value="34">B</entry><entry value="35">C</entry>
+            <entry value="36">D</entry><entry value="37">E</entry><entry value="38">F</entry><entry value="39">G</entry>
+            <entry value="40">H</entry><entry value="41">I</entry><entry value="42">J</entry><entry value="43">K</entry>
+            <entry value="44">L</entry><entry value="45">M</entry><entry value="46">N</entry><entry value="47">O</entry>
+            <entry value="48">P</entry><entry value="49">Q</entry><entry value="50">R</entry><entry value="51">S</entry>
+            <entry value="52">T</entry><entry value="53">U</entry><entry value="54">V</entry><entry value="55">W</entry>
+            <entry value="56">X</entry><entry value="57">Y</entry><entry value="58">Z</entry><entry value="59">6</entry>
+            <entry value="60">7</entry><entry value="61">8</entry><entry value="62">9</entry><entry value="63">_</entry>
+        </list>
+        <list bit="73-78" title="Char 13">
+            <entry value="0">NULL</entry><entry value="1">a</entry><entry value="2">b</entry><entry value="3">c</entry>
+            <entry value="4">d</entry><entry value="5">e</entry><entry value="6">f</entry><entry value="7">g</entry>
+            <entry value="8">h</entry><entry value="9">i</entry><entry value="10">j</entry><entry value="11">k</entry>
+            <entry value="12">l</entry><entry value="13">m</entry><entry value="14">n</entry><entry value="15">o</entry>
+            <entry value="16">p</entry><entry value="17">q</entry><entry value="18">r</entry><entry value="19">s</entry>
+            <entry value="20">t</entry><entry value="21">u</entry><entry value="22">v</entry><entry value="23">w</entry>
+            <entry value="24">x</entry><entry value="25">y</entry><entry value="26">z</entry><entry value="27">0</entry>
+            <entry value="28">1</entry><entry value="29">2</entry><entry value="30">3</entry><entry value="31">4</entry>
+            <entry value="32">5</entry><entry value="33">A</entry><entry value="34">B</entry><entry value="35">C</entry>
+            <entry value="36">D</entry><entry value="37">E</entry><entry value="38">F</entry><entry value="39">G</entry>
+            <entry value="40">H</entry><entry value="41">I</entry><entry value="42">J</entry><entry value="43">K</entry>
+            <entry value="44">L</entry><entry value="45">M</entry><entry value="46">N</entry><entry value="47">O</entry>
+            <entry value="48">P</entry><entry value="49">Q</entry><entry value="50">R</entry><entry value="51">S</entry>
+            <entry value="52">T</entry><entry value="53">U</entry><entry value="54">V</entry><entry value="55">W</entry>
+            <entry value="56">X</entry><entry value="57">Y</entry><entry value="58">Z</entry><entry value="59">6</entry>
+            <entry value="60">7</entry><entry value="61">8</entry><entry value="62">9</entry><entry value="63">_</entry>
+        </list>
+        <list bit="79-84" title="Char 14">
+            <entry value="0">NULL</entry><entry value="1">a</entry><entry value="2">b</entry><entry value="3">c</entry>
+            <entry value="4">d</entry><entry value="5">e</entry><entry value="6">f</entry><entry value="7">g</entry>
+            <entry value="8">h</entry><entry value="9">i</entry><entry value="10">j</entry><entry value="11">k</entry>
+            <entry value="12">l</entry><entry value="13">m</entry><entry value="14">n</entry><entry value="15">o</entry>
+            <entry value="16">p</entry><entry value="17">q</entry><entry value="18">r</entry><entry value="19">s</entry>
+            <entry value="20">t</entry><entry value="21">u</entry><entry value="22">v</entry><entry value="23">w</entry>
+            <entry value="24">x</entry><entry value="25">y</entry><entry value="26">z</entry><entry value="27">0</entry>
+            <entry value="28">1</entry><entry value="29">2</entry><entry value="30">3</entry><entry value="31">4</entry>
+            <entry value="32">5</entry><entry value="33">A</entry><entry value="34">B</entry><entry value="35">C</entry>
+            <entry value="36">D</entry><entry value="37">E</entry><entry value="38">F</entry><entry value="39">G</entry>
+            <entry value="40">H</entry><entry value="41">I</entry><entry value="42">J</entry><entry value="43">K</entry>
+            <entry value="44">L</entry><entry value="45">M</entry><entry value="46">N</entry><entry value="47">O</entry>
+            <entry value="48">P</entry><entry value="49">Q</entry><entry value="50">R</entry><entry value="51">S</entry>
+            <entry value="52">T</entry><entry value="53">U</entry><entry value="54">V</entry><entry value="55">W</entry>
+            <entry value="56">X</entry><entry value="57">Y</entry><entry value="58">Z</entry><entry value="59">6</entry>
+            <entry value="60">7</entry><entry value="61">8</entry><entry value="62">9</entry><entry value="63">_</entry>
+        </list>
+        <list bit="85-90" title="Char 15">
+            <entry value="0">NULL</entry><entry value="1">a</entry><entry value="2">b</entry><entry value="3">c</entry>
+            <entry value="4">d</entry><entry value="5">e</entry><entry value="6">f</entry><entry value="7">g</entry>
+            <entry value="8">h</entry><entry value="9">i</entry><entry value="10">j</entry><entry value="11">k</entry>
+            <entry value="12">l</entry><entry value="13">m</entry><entry value="14">n</entry><entry value="15">o</entry>
+            <entry value="16">p</entry><entry value="17">q</entry><entry value="18">r</entry><entry value="19">s</entry>
+            <entry value="20">t</entry><entry value="21">u</entry><entry value="22">v</entry><entry value="23">w</entry>
+            <entry value="24">x</entry><entry value="25">y</entry><entry value="26">z</entry><entry value="27">0</entry>
+            <entry value="28">1</entry><entry value="29">2</entry><entry value="30">3</entry><entry value="31">4</entry>
+            <entry value="32">5</entry><entry value="33">A</entry><entry value="34">B</entry><entry value="35">C</entry>
+            <entry value="36">D</entry><entry value="37">E</entry><entry value="38">F</entry><entry value="39">G</entry>
+            <entry value="40">H</entry><entry value="41">I</entry><entry value="42">J</entry><entry value="43">K</entry>
+            <entry value="44">L</entry><entry value="45">M</entry><entry value="46">N</entry><entry value="47">O</entry>
+            <entry value="48">P</entry><entry value="49">Q</entry><entry value="50">R</entry><entry value="51">S</entry>
+            <entry value="52">T</entry><entry value="53">U</entry><entry value="54">V</entry><entry value="55">W</entry>
+            <entry value="56">X</entry><entry value="57">Y</entry><entry value="58">Z</entry><entry value="59">6</entry>
+            <entry value="60">7</entry><entry value="61">8</entry><entry value="62">9</entry><entry value="63">_</entry>
+        </list>
+        <list bit="91-96" title="Char 16">
+            <entry value="0">NULL</entry><entry value="1">a</entry><entry value="2">b</entry><entry value="3">c</entry>
+            <entry value="4">d</entry><entry value="5">e</entry><entry value="6">f</entry><entry value="7">g</entry>
+            <entry value="8">h</entry><entry value="9">i</entry><entry value="10">j</entry><entry value="11">k</entry>
+            <entry value="12">l</entry><entry value="13">m</entry><entry value="14">n</entry><entry value="15">o</entry>
+            <entry value="16">p</entry><entry value="17">q</entry><entry value="18">r</entry><entry value="19">s</entry>
+            <entry value="20">t</entry><entry value="21">u</entry><entry value="22">v</entry><entry value="23">w</entry>
+            <entry value="24">x</entry><entry value="25">y</entry><entry value="26">z</entry><entry value="27">0</entry>
+            <entry value="28">1</entry><entry value="29">2</entry><entry value="30">3</entry><entry value="31">4</entry>
+            <entry value="32">5</entry><entry value="33">A</entry><entry value="34">B</entry><entry value="35">C</entry>
+            <entry value="36">D</entry><entry value="37">E</entry><entry value="38">F</entry><entry value="39">G</entry>
+            <entry value="40">H</entry><entry value="41">I</entry><entry value="42">J</entry><entry value="43">K</entry>
+            <entry value="44">L</entry><entry value="45">M</entry><entry value="46">N</entry><entry value="47">O</entry>
+            <entry value="48">P</entry><entry value="49">Q</entry><entry value="50">R</entry><entry value="51">S</entry>
+            <entry value="52">T</entry><entry value="53">U</entry><entry value="54">V</entry><entry value="55">W</entry>
+            <entry value="56">X</entry><entry value="57">Y</entry><entry value="58">Z</entry><entry value="59">6</entry>
+            <entry value="60">7</entry><entry value="61">8</entry><entry value="62">9</entry><entry value="63">_</entry>
+        </list>
+    </sprite>
+    <sprite id="746" name="Switch Block Event Activator" comment="This sprite is used in combination with the Switch Block (763)">
+        <value nybble="1-2" title="Event 1"/>
+        <value nybble="3-4" title="Event 2"/>
+    </sprite>
+    <sprite id="747" name="Universal Boss Controller"></sprite>
+    <sprite id="748" name="Giant Skewer">
+        <value nybble="5" title="Extend Distance"/>
+    </sprite>
+    <sprite id="749" name="Scuttlebug"></sprite>
+    <sprite id="750" name="Angry Grrrol">
+        <value nybble="1" title="Speed"/>
+    </sprite>
+    <sprite id="751" name="Poison Mushroom">
+        <list nybble="6" title="Spawn Type">
+            <entry value="6">Reward</entry>
+        </list>
+    </sprite>
+    <sprite id="752" name="Magic Platform">
+		<value nybble="11-12" title="Location ID"/>
+		<list nybble="10" title="Collider type">
+			<entry value="0">Solid</entry>
+			<entry value="1">Solid-on-top</entry>
+			<entry value="2">None</entry>
+		</list>
+		<list nybble="7-8" title="Type" comment="Presets for surface types and other properties.">
+			<entry value="0">Normal</entry>
+			<entry value="1">Coin</entry>
+			<entry value="2">Green Coin</entry>
+			<entry value="3">Blue Coin</entry>
+			<entry value="4">Coin Outline</entry>
+			<entry value="5">Fence</entry>
+			<entry value="6">Vine</entry>
+			<entry value="7">? Block</entry>
+			<entry value="8">Brick Block</entry>
+			<entry value="9">Big ? Block</entry>
+			<entry value="10">Big Brick Block</entry>
+			<entry value="11">Big Empty Block</entry>
+			<entry value="12">Empty Block</entry>
+			<entry value="13">UNUSED</entry>
+			<entry value="14">Wooden/Stone Block</entry>
+			<entry value="15">UNUSED</entry>
+			<entry value="16">Donut Lift</entry>
+			<entry value="17">Boost Block</entry>
+			<entry value="18">UNUSED</entry>
+			<entry value="19">Water</entry>
+			<entry value="20">Lava</entry>
+			<entry value="21">Poison Water</entry>
+			<entry value="22">Quicksand</entry>
+			<entry value="23">Carpet (UNUSED)</entry>
+			<entry value="24">Leaves</entry>
+			<entry value="25">Wood</entry>
+			<entry value="26">Bouncy Cloud?</entry>
+			<entry value="27">Swinging Vine</entry>
+			<entry value="28">Swinging Chain</entry>
+			<entry value="29">Rope Ladder</entry>
+			<entry value="30">Ice</entry>
+			<entry value="31">Frozen Actor?</entry>
+			<entry value="32">Portable Ice Block?</entry>
+			<entry value="33">Grrrols can pass through?</entry>
+			<entry value="34">UNUSED</entry>
+			<entry value="35">Pipe Bubbles?</entry>
+			<entry value="36">Airship Hand?</entry>
+			<entry value="37">Water Geyser?</entry>
+			<entry value="38">Pipe?</entry>
+			<entry value="39">Spine Coaster?</entry>
+			<entry value="40">Urchin?</entry>
+			<entry value="41">Invisible Block</entry>
+		</list>
+		<list nybble="9" title="Surface Type" comment="Surface type to override the one set by the &quot;Type&quot; option.">
+			<entry value="0">Default</entry>
+			<entry value="1">Ice</entry>
+			<entry value="2">Snow</entry>
+			<entry value="3">Quicksand</entry>
+			<entry value="4">Desert Sand</entry>
+			<entry value="5">Grass</entry>
+			<entry value="6">Cloud</entry>
+			<entry value="7">Beach Sand</entry>
+			<entry value="8">Carpet</entry>
+			<entry value="9">Leaves</entry>
+			<entry value="10">Wood</entry>
+			<entry value="11">Water</entry>
+			<entry value="12">Beanstalk Leaf</entry>
+		</list>
+		<checkbox nybble="10" title="Use Surface Type" comment="If checked, the &quot;Surface Type&quot; option will override the surface type set by the &quot;Type&quot; option."/>
+		<list nybble="20" title="Movement Type">
+			<entry value="0">None</entry>
+			<entry value="1">Sway Or Spin (68, 69, 116, 118)</entry>
+			<entry value="2">Bolt (238)</entry>
+			<entry value="3">Path (100)</entry>
+			<entry value="4">Two-Way (70)</entry>
+			<entry value="6">BoltMushroom (241)</entry>
+			<entry value="7">No-bolt Mushroom (242)</entry>
+			<entry value="8">Shifting Platform (132)</entry>
+			<entry value="9">Spinning (214, 484)</entry>
+			<entry value="10">Rolling Hill (265)</entry>
+			<entry value="11">Moving Mushroom Lift (210)</entry>
+		</list>
+		<value nybble="21-22" title="Movement ID"/>
+	</sprite>
+    <sprite id="753" name="Cold Fuzzy"></sprite>
+    <sprite id="754" name="Wavy Water">
+        <value nybble="1" title="Ripple Speed"/>
+        <value nybble="2" title="Horizontal Speed"/>
+        <value nybble="3" title="Wave Frequency"/>
+        <value nybble="4" title="Baseline Height Offset"/>
+        <value nybble="5" title="Ripple Height"/>
+        <value nybble="6" title="Ripple Count"/>
+        <value nybble="7" title="Unknown Value"/>
+    </sprite>
+    <sprite id="755" name="Wavy Poison">
+        <value nybble="1" title="Ripple Speed"/>
+        <value nybble="2" title="Horizontal Speed"/>
+        <value nybble="3" title="Wave Frequency"/>
+        <value nybble="4" title="Baseline Height Offset"/>
+        <value nybble="5" title="Ripple Height"/>
+        <value nybble="6" title="Ripple Count"/>
+        <value nybble="7" title="Unknown Value"/>
+    </sprite>
+    <sprite id="756" name="Wavy Quicksand">
+        <value nybble="1" title="Ripple Speed"/>
+        <value nybble="2" title="Horizontal Speed"/>
+        <value nybble="3" title="Wave Frequency"/>
+        <value nybble="4" title="Baseline Height Offset"/>
+        <value nybble="5" title="Ripple Height"/>
+        <value nybble="6" title="Ripple Count"/>
+        <value nybble="7" title="Unknown Value"/>
+    </sprite>
+    <sprite id="757" name="Player Layer Changer">
+        <value nybble="1-2" title="Triggering Event ID"/>
+        <list nybble="5" title="Destination Layer">
+            <entry value="0">Layer 1</entry>
+            <entry value="1">Layer 2</entry>
+            <entry value="2">Layer 0</entry>
+        </list>
+    </sprite>
+     <sprite id="758" name="Biddybud">
+        <list nybble="5" title="Color">
+            <entry value="0">Red</entry>
+            <entry value="1">Yellow</entry>
+            <entry value="2">Green</entry>
+            <entry value="3">Blue</entry>
+            <entry value="4">Pink</entry>
+        </list>
+        <list nybble="20" title="Movement Type">
+			<entry value="0">None</entry>
+			<entry value="1">Sway Or Spin (68, 69, 116, 118)</entry>
+			<entry value="2">Bolt (238)</entry>
+			<entry value="3">Path (100)</entry>
+			<entry value="4">Two-Way (70)</entry>
+			<entry value="6">BoltMushroom (241)</entry>
+			<entry value="7">No-bolt Mushroom (242)</entry>
+			<entry value="8">Shifting Platform (132)</entry>
+			<entry value="9">Spinning (214, 484)</entry>
+			<entry value="10">Rolling Hill (265)</entry>
+			<entry value="11">Moving Mushroom Lift (210)</entry>
+		</list>
+        <value nybble="21-22" title="Movement ID"/>
+    </sprite>
+    <sprite id="759" name="Helical Bar">
+        <list nybble="1" title="Number of bars">
+            <entry value="0">1</entry>
+            <entry value="1">2</entry>
+            <entry value="2">3</entry>
+        </list>
+        <checkbox nybble="2" title="Animate"/>
+        <value nybble="4" title="Helix multiplier"/>
+    </sprite>
+    <sprite id="760" name="Basalt Bones"></sprite>
+    <sprite id="761" name="Flaptor">
+        <value nybble="1" title="Move distance"/>
+        <list nybble="2" title="Movement type">
+            <entry value="0">Static</entry>
+            <entry value="1">Horizontal</entry>
+            <entry value="2">Vertical</entry>
+        </list>
+    </sprite>
+    <sprite id="762" name="Star Coin Shard Manager">
+        <value nybble="1" title="ID"/>
+        <value nybble="2" title="Required shards"/>
+        <list nybble="9" title="Type">
+            <entry value="0">First Star Coin</entry>
+            <entry value="1">Second Star Coin</entry>
+            <entry value="2">Third Star Coin</entry>
+        </list>
+    </sprite>
+    <sprite id="763" name="Switch Block" comment="This sprite is used in combination with the Switch Block Event Activator (746)."/>
+    <sprite id="764" name="Powerup Switcher"/>
+    <sprite id="765" name="Minecart"/>
+    <sprite id="766" name="Triple Block">
+        <list nybble="1" title="Middle Contents">
+            <entry value="0">1-up Mushroom</entry>
+            <entry value="1">1 Coin</entry>
+            <entry value="2">3 Coins</entry>
+            <entry value="3">Mushroom</entry>
+            <entry value="4">Fire Flower</entry>
+            <entry value="5">Ice Flower</entry>
+            <entry value="6">Penguin</entry>
+            <entry value="7">Propeller</entry>
+            <entry value="8">Star</entry>
+            <entry value="9">Star</entry>
+            <entry value="10">Acorn</entry>
+            <entry value="11">3-up Moon</entry>
+            <entry value="12">Springboard</entry>
+            <entry value="13">Vine</entry>
+            <entry value="14">Yoshi Egg</entry>
+        </list>
+        <list nybble="2" title="Animation">
+            <entry value="0">Standard</entry>
+            <entry value="1">Underground</entry>
+            <entry value="2">Lava</entry>
+            <entry value="3">Lava 2</entry>
+        </list>
+    </sprite>
+    <sprite id="767" name="Physics Modifier" comment="Enables low-gravity when triggered">
+    	<value nybble="1-2" title="Triggering Event ID"/>
+    </sprite>
+    <sprite id="768" name="Music Note">
+        <value nybble="1-2" title="Manager ID"/>
+        <list nybble="3" title="Note Sound">
+            <entry value="0">First C</entry>
+            <entry value="1">D</entry>
+            <entry value="2">E</entry>
+            <entry value="3">F</entry>
+            <entry value="4">G</entry>
+            <entry value="5">A</entry>
+            <entry value="6">B</entry>
+            <entry value="7">Second C</entry>
+        </list>
+        <list nybble="20" title="Movement Type">
+			<entry value="0">None</entry>
+			<entry value="1">Sway Or Spin (68, 69, 116, 118)</entry>
+			<entry value="2">Bolt (238)</entry>
+			<entry value="3">Path (100)</entry>
+			<entry value="4">Two-Way (70)</entry>
+			<entry value="6">BoltMushroom (241)</entry>
+			<entry value="7">No-bolt Mushroom (242)</entry>
+			<entry value="8">Shifting Platform (132)</entry>
+			<entry value="9">Spinning (214, 484)</entry>
+			<entry value="10">Rolling Hill (265)</entry>
+			<entry value="11">Moving Mushroom Lift (210)</entry>
+		</list>
+        <value nybble="21-22" title="Movement ID"/>
+    </sprite>
+    <sprite id="769" name="Music Note Manager" notes="Spawns a clef that, when collected, spawns a bunch of notes. Collect them all within the time limit for an item!">
+        <value nybble="1-2" title="Manager ID"/>
+        <value nybble="3-4" title="Target Note Count" comment="The required number of notes with a matching ID to activate an event."/>
+        <list nybble="5" title="Powerup" comment="The powerup reward once all notes are collected.">
+            <entry value="0">Mushroom</entry>
+            <entry value="1">Fire Flower</entry>
+            <entry value="2">Ice Flower</entry>
+            <entry value="3">Mini Mushroom</entry>
+            <entry value="4">Propeller Mushroom</entry>
+            <entry value="5">Penguin</entry>
+            <entry value="6">Acorn</entry>
+            <entry value="7">1-up Mushroom</entry>
+            <entry value="8">3-up Moon</entry>
+            <entry value="9">1st star coin</entry>
+            <entry value="10">2nd star coin</entry>
+            <entry value="11">3rd star coin</entry>
+        </list>
+        <value nybble="6-7" title="Time Limit" comment="In seconds."/>
+        <list nybble="20" title="Movement Type">
+			<entry value="0">None</entry>
+			<entry value="1">Sway Or Spin (68, 69, 116, 118)</entry>
+			<entry value="2">Bolt (238)</entry>
+			<entry value="3">Path (100)</entry>
+			<entry value="4">Two-Way (70)</entry>
+			<entry value="6">BoltMushroom (241)</entry>
+			<entry value="7">No-bolt Mushroom (242)</entry>
+			<entry value="8">Shifting Platform (132)</entry>
+			<entry value="9">Spinning (214, 484)</entry>
+			<entry value="10">Rolling Hill (265)</entry>
+			<entry value="11">Moving Mushroom Lift (210)</entry>
+		</list>
+        <value nybble="21-22" title="Movement ID"/>
+    </sprite>
+	    <sprite id="770" name="Peepa">
+        <checkbox nybble="1" title="Has Platform"/>
+        <list nybble="2" title="Platform Type">
+            <entry value="0">Wood</entry>
+            <entry value="1">Stone</entry>
+            <entry value="3">Bolt Platform</entry>
+            <entry value="7">Wood Snow</entry>
+            <entry value="8">Cloud</entry>
+        </list>
+        <list nybble="20" title="Movement Type">
+			<entry value="0">None</entry>
+			<entry value="1">Sway Or Spin (68, 69, 116, 118)</entry>
+			<entry value="2">Bolt (238)</entry>
+			<entry value="3">Path (100)</entry>
+			<entry value="4">Two-Way (70)</entry>
+			<entry value="6">BoltMushroom (241)</entry>
+			<entry value="7">No-bolt Mushroom (242)</entry>
+			<entry value="8">Shifting Platform (132)</entry>
+			<entry value="9">Spinning (214, 484)</entry>
+			<entry value="10">Rolling Hill (265)</entry>
+			<entry value="11">Moving Mushroom Lift (210)</entry>
+		</list>
+        <value nybble="21-22" title="Movement ID"/>
+    </sprite>
+    <sprite id="771" name="Solid">
+        <value nybble="1" title="Point 1 X" />
+        <checkbox nybble="2" title="Point 1 X Negative" />
+        <value nybble="3" title="Point 1 Y" />
+        <checkbox nybble="4" title="Point 1 Y Negative" />
+        <value nybble="5" title="Point 2 X" />
+        <checkbox nybble="6" title="Point 2 X Negative" />
+        <value nybble="7" title="Point 2 Y" />
+        <checkbox nybble="8" title="Point 2 Y Negative" />
+        <value nybble="9" title="Rotation" />
+    </sprite>
+    <sprite id="772" name="Universal Movement Controller">
+        <value nybble="1-2" title="Target ID" comment="Set the 'Initial State' number of the target sprite to match with this number"/>
+        <list nybble="20" title="Movement Type">
+			<entry value="0">None</entry>
+			<entry value="1">Sway Or Spin (68, 69, 116, 118)</entry>
+			<entry value="2">Bolt (238)</entry>
+			<entry value="3">Path (100)</entry>
+			<entry value="4">Two-Way (70)</entry>
+			<entry value="6">BoltMushroom (241)</entry>
+			<entry value="7">No-bolt Mushroom (242)</entry>
+			<entry value="8">Shifting Platform (132)</entry>
+			<entry value="9">Spinning (214, 484)</entry>
+			<entry value="10">Rolling Hill (265)</entry>
+			<entry value="11">Moving Mushroom Lift (210)</entry>
+		</list>
+        <value nybble="21-22" title="Movement ID"/>
+        <checkbox nybble="3" title="Safe Mode" comment="Only apply to specific sprites"/>
+        <list nybble="4" title="Safe Mode Type">
+            <entry value="0">Sprite ID</entry>
+            <entry value="1">Profile ID</entry>
+        </list>
+        <value nybble="5-7" title="Safe Mode ID" comment="Target sprite/profile ID. Only applies when safe mode is active"/>
+    </sprite>
+    <sprite id="773" name="Event Activated Time Changer">
+        <value nybble="1-2" title="Triggering Event ID"/>
+        <value nybble="13-15" title="Time (seconds)"/>
+        
+        <list nybble="8" title="Type">
+            <entry value="0">Add</entry>
+            <entry value="1">Subtract</entry>
+            <entry value="2">Set</entry>
+        </list>
+        <checkbox nybble="11" title="Multiple uses"/>
+    </sprite>
+    <sprite id="774" name="Custom Powerup Question (?) Block">
+        <list nybble="1" title="Type">
+            <entry value="0">Hammer</entry>
+            <entry value="1">Poison Mushroom</entry>
+            <entry value="2">PAcorn</entry>
+        </list>
+        <list nybble="2" title="Block" comment="* means that the option is unfinished and you probably shouldn't use it.">
+            <entry value="0">Question Block</entry>
+            <entry value="1">Brick Block</entry>
+            <entry value="2">Hidden Block*</entry>
+        </list>
+    </sprite>
+    <sprite id="775" name="One Way Platform">
+        <value nybble="1-2" title="Triggering Event ID"/>
+        <value nybble="5" title="Width"/>
+        <list nybble="6" title="Platform Type">
+            <entry value="0">Wood</entry>
+            <entry value="1">Stone</entry>
+            <entry value="3">Bolt Platform</entry>
+            <entry value="7">Wood Snow</entry>
+            <entry value="8">Cloud</entry>
+        </list>
+        <list nybble="7" title="Direction">
+            <entry value="0">Up</entry>
+            <entry value="1">Down</entry>
+            <entry value="2">Left</entry>
+            <entry value="3">Right</entry>
+        </list>
+        <list nybble="20" title="Movement Type">
+			<entry value="0">None</entry>
+			<entry value="2">Bolt (238)</entry>
+			<entry value="3">Path (100)</entry>
+			<entry value="4">Two-Way (70)</entry>
+			<entry value="6">BoltMushroom (241)</entry>
+			<entry value="7">No-bolt Mushroom (242)</entry>
+			<entry value="8">Shifting Platform (132)</entry>
+		</list>
+        <value nybble="21-22" title="Movement ID"/>
+    </sprite>
+    <sprite id="776" name="Wave Platform">
+        <list nybble="6" title="Platform Type">
+            <entry value="0">Wood</entry>
+            <entry value="1">Stone</entry>
+            <entry value="3">Bolt Platform</entry>
+            <entry value="7">Wood Snow</entry>
+            <entry value="8">Cloud</entry>
+        </list>
+        <value nybble="12" title="Width"/>
+    </sprite>
+    <sprite id="777" name="Actor Manipulator" notes="You can manipulate an actor's many variables. This actor can crash your game if you aren't careful. More info in the 'ID' comment.">
+        <value nybble="1-2" title="Triggering Event ID"/>
+        <checkbox nybble="6" title="Event Activated" comment="Rather than activating right away, this will allow you to activate using an event."/>
+        <value nybble="7-8" title="Target ID" comment="Deletes the actor with the same 'Initial State' number as this value."/>
+        <list nybble="9" title="ID Type">
+            <entry value="0">Profile ID</entry>
+            <entry value="1">Sprite ID</entry>
+        </list>
+        <value nybble="10-12" title="ID" comment="The Sprite/Profile ID you want to target. Depending on the actor, some or all of the options below will crash your game. Sometimes, the crashing is inconsistent and random. If so, don't use this actor on them as they are most likely incompatiple with this actor."/>
+        <checkbox nybble="5" title="Delete Actor" comment="Checking this will delete the actor."/>
+        <checkbox nybble="4" title="Invisible" comment="Checking this will make the actor invisible."/>
+        <checkbox nybble="3" title="Inactive" comment="Checking this will disable the actor's functionality."/>
+        <checkbox nybble="13" title="Change Scale" comment="This will change the scale of an actor. This does not change its hitbox."/>
+        <value nybble="14" title="Scale X"/>
+        <value nybble="15" title="Scale Y"/>
+        <value nybble="16" title="Scale Z"/>
+        <checkbox nybble="17" title="Change Size" comment="I don't even know what this does, let me know what this does so I can update this comment accordingly. -PoeDev"/>
+        <value nybble="18" title="Size X"/>
+        <value nybble="19" title="Size Y"/>
+    </sprite>
+    <sprite id="778" name="Floaty Goomba">
+        <checkbox nybble="1" title="Only Floaty"/>
+    </sprite>
+	<sprite id="779" name="Piranha Sprout"/>
+    <sprite id="780" name="Poison Piranha"/>
+<sprite id="319" name="Move-when-on Metal Block [UNUSED]" notes="A tall block with a lava glow underneath it that will move at any point when a specified number of 'passengers' (players + enemies) are standing on it, then goes back to the original position.">
+       <list nybble="18" title="Size" comment="This determines the size of the block.">
+                     <entry value="0">Small</entry>
+                   <entry value="1">Medium</entry>
+                   <entry value="2">Large</entry>
+           </list>
+         <list nybble="11" title="Moves with Passenger Number" comment="This determines how many 'passengers' are needed for the block's movement to activate. Only seems to work with players with current research." comment2="eh">
+                   <entry value="0">1 Passenger</entry>
+                   <entry value="1">2 Passengers</entry>
+                   <entry value="2">3 Passengers</entry>
+                   <entry value="3">4 Passengers</entry>
+                   <entry value="4">5 Passengers</entry>
+                   <entry value="5">6 Passengers</entry>
+                   <entry value="6">7 Passengers</entry>
+                   <entry value="7">8 Passengers</entry>
+                   <entry value="8">9 Passengers</entry>
+                   <entry value="9">10 Passengers</entry>
+                   <entry value="10">11 Passengers</entry>
+                   <entry value="11">12 Passengers</entry>
+                   <entry value="12">13 Passengers</entry>
+                   <entry value="13">14 Passengers</entry>
+                   <entry value="14">15 Passengers</entry>
+                   <entry value="15">16 Passengers</entry>
+             </list>
+         <list nybble="7" title="Direction" comment="This determines which direction the block will move while moving.">
+                 <entry value="0">Right</entry>
+                 <entry value="1">Left</entry>
+                 <entry value="2">Up</entry>
+                 <entry value="3">Down</entry>
+             </list>
+         <value nybble="16" title="Speed" comment="This determines how quickly the block will move while moving."/>
+     </sprite>
+	 <sprite id="358" name="Bolt-controlled Airship Platform - Crashes (NSMBW) [UNUSED]" notes="Crashes the game. Tries to load 'lift_turi_ashiba.szs' but that file does not exist. A fully solid, airship style platform that moves down when used with a bolt. Goes with sprite 360.">
+	 <list nybble="18" title="Width" comment="This determines the size of the platform.">
+                     <entry value="0">2 blocks wide</entry>
+                   <entry value="1">3 blocks wide</entry>
+                   <entry value="2">4 blocks wide</entry>
+                   <entry value="3">5 blocks wide</entry>
+                   <entry value="4">6 blocks wide</entry>
+                   <entry value="5">7 blocks wide</entry>
+                   <entry value="6">8 blocks wide</entry>
+                   <entry value="7">9 blocks wide</entry>
+                   <entry value="8">10 blocks wide</entry>
+                   <entry value="9">11 blocks wide</entry>
+                   <entry value="10">12 blocks wide</entry>
+                   <entry value="11">13 blocks wide</entry>
+                   <entry value="12">14 blocks wide</entry>
+                   <entry value="13">15 blocks wide</entry>
+                   <entry value="14">16 blocks wide</entry>
+                   <entry value="15">17 blocks wide</entry>
+           </list>
+		<list nybble="16" title="Speed" comment="Carry over from sprite 530">
+			<entry value="0">1.0</entry>
+			<entry value="1">1.5</entry>
+			<entry value="2">2.0</entry>
+			<entry value="3">3.0</entry>
+			<entry value="4">4.0</entry>
+			<entry value="5">1.0</entry>
+			<entry value="6">1.0</entry>
+			<entry value="7">1.0</entry>
+		</list>
+		<value nybble="21-22" title="Bolt ID" comment="Bolt ID for sprite"/>
+	 </sprite>
+	 <sprite id="360" name="Bolt-controlled Airship Platform Wire - Crashes (NSMBW) [UNUSED]" notes="Crashes the game. Tries to load 'lift_turi_ashiba_wire.szs' but that file does not exist. A non-solid, airship style metal wire that extends upwards 16 blocks. Moves down when used with a bolt. Goes on top of sprite 358.">
+		<list nybble="16" title="Speed" comment="Carry over from sprite 530">
+			<entry value="0">1.0</entry>
+			<entry value="1">1.5</entry>
+			<entry value="2">2.0</entry>
+			<entry value="3">3.0</entry>
+			<entry value="4">4.0</entry>
+			<entry value="5">1.0</entry>
+			<entry value="6">1.0</entry>
+			<entry value="7">1.0</entry>
+		</list>
+		<value nybble="21-22" title="Bolt ID" comment="Bolt ID for sprite"/>
+	 </sprite>
+	 <sprite id="202" name="Propeller Block (NSMBW) (CRASHES) [UNUSED]" notes="A block that went unused in this game, and lacks a model. Crashes because block_fly.szs does not exist."/>
+	<sprite id="203" name="Portable Ice Block (NSMBW) [UNUSED]" notes="Works. Uses the same model as the gravity-affected ice blocks.">
+		<checkbox nybble="10" title="Frozen Coin" comment="If checked, the ice block will have a coin frozen inside. (A bit glitchy when holding...)"/>
+	</sprite>
+	<sprite id="267" name="Giant Koopa Shell Cave (NSMBW) (CRASHES) [UNUSED]" notes="Crashes the game. Tries to load 'big_shell.szs' but that file does not exist."/>
+	<sprite id="177" name="4-Way Cannon - Crashes (NSMBW) [UNUSED]" notes="The files it tries to load don't exist."/>
+	<sprite id="178" name="Giant 4-Way Cannon - Crashes (NSMBW) [UNUSED]" notes="Files it tries to load don't exist."/>
+</sprites>
