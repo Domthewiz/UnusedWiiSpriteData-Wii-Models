@@ -11,17 +11,17 @@ import spritelib as SLib
 ImageCache = SLib.ImageCache
 
 
-class SpriteImage_ActorSpawner(SLib.SpriteImage_Static):  # 724
+class SpriteImage_ActrSpawner(SLib.SpriteImage_Static):  # 724
     def __init__(self, parent):
         super().__init__(
             parent,
             3.75,
-            ImageCache['actor'],
+            ImageCache['acor'],
             (0, -240),
         )
 
     def loadImages():
-        SLib.loadIfNotInImageCache('actor', 'Actor_Spawner.png')
+        SLib.loadIfNotInImageCache('acor', 'Actr_Spawner.png')
 class SpriteImage_TiltGirder(SLib.SpriteImage_Static):  # 724
     def __init__(self, parent):
         super().__init__(
@@ -33,6 +33,19 @@ class SpriteImage_TiltGirder(SLib.SpriteImage_Static):  # 724
 
     def loadImages():
         SLib.loadIfNotInImageCache('girder', 'tilt_girder.png')
+        
+class SpriteImage_LightGem(SLib.SpriteImage_Static):  # 724
+    def __init__(self, parent):
+        super().__init__(
+            parent,
+            3.75,
+            ImageCache['lightgem'],
+            (0, 0),
+        )
+
+    def loadImages():
+        SLib.loadIfNotInImageCache('lightgem', 'light_gem.png')
+
 class SpriteImage_PropellerBlock(SLib.SpriteImage_Static):  # 724
     def __init__(self, parent):
         super().__init__(
@@ -275,7 +288,7 @@ class SpriteImage_FakeActor(SLib.SpriteImage_Static):  # 727
         super().dataChanged()
 
 ImageClasses = {
-    360: SpriteImage_ActorSpawner,
+    360: SpriteImage_ActrSpawner,
     358: SpriteImage_FakeActor,
     345: SpriteImage_TiltGirder,
     202: SpriteImage_PropellerBlock,
@@ -283,5 +296,6 @@ ImageClasses = {
     199: SpriteImage_GlwBlock,
     522: SpriteImage_LiftTaru,
     319: SpriteImage_Metealbox,
-    267: SpriteImage_KoopaCave
+    267: SpriteImage_KoopaCave,
+    377: SpriteImage_LightGem
 }
