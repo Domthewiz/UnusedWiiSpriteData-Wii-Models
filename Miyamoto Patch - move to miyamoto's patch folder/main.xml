@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<game name="Unused Wii Actor Spritedata + Wii Models" version="1.0" description="An attempt to add the spritedata for the unused Wii carryovers.">
+
+    <!-- Folders -->
+    <folder name="sprites" path="sprites" />
+	<file name="sprites" path="sprites.py" />
+
+    <!-- Files -->
+    <!-- <file name="sprites" path="sprites.py" /> not needed atm but will be useful later -->
+    <file name="spritedata" path="spritedata.xml" />
+
+</game>

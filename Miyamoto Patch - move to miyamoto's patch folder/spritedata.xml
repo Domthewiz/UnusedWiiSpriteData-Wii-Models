@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<sprites>
+<sprite id="319" name="Move-when-on Metal Block [UNUSED]" notes="A tall block with a lava glow underneath it that will move at any point when a specified number of 'passengers' (players + enemies) are standing on it, then goes back to the original position.">
+       <list nybble="18" title="Size" comment="This determines the size of the block.">
+                     <entry value="0">Small</entry>
+                   <entry value="1">Medium</entry>
+                   <entry value="2">Large</entry>
+           </list>
+         <list nybble="11" title="Moves with Passenger Number" comment="This determines how many 'passengers' are needed for the block's movement to activate. Only seems to work with players with current research." comment2="eh">
+                   <entry value="0">1 Passenger</entry>
+                   <entry value="1">2 Passengers</entry>
+                   <entry value="2">3 Passengers</entry>
+                   <entry value="3">4 Passengers</entry>
+                   <entry value="4">5 Passengers</entry>
+                   <entry value="5">6 Passengers</entry>
+                   <entry value="6">7 Passengers</entry>
+                   <entry value="7">8 Passengers</entry>
+                   <entry value="8">9 Passengers</entry>
+                   <entry value="9">10 Passengers</entry>
+                   <entry value="10">11 Passengers</entry>
+                   <entry value="11">12 Passengers</entry>
+                   <entry value="12">13 Passengers</entry>
+                   <entry value="13">14 Passengers</entry>
+                   <entry value="14">15 Passengers</entry>
+                   <entry value="15">16 Passengers</entry>
+             </list>
+         <list nybble="7" title="Direction" comment="This determines which direction the block will move while moving.">
+                 <entry value="0">Right</entry>
+                 <entry value="1">Left</entry>
+                 <entry value="2">Up</entry>
+                 <entry value="3">Down</entry>
+             </list>
+         <value nybble="16" title="Speed" comment="This determines how quickly the block will move while moving."/>
+     </sprite>
+	 <sprite id="358" name="Bolt-controlled Airship Platform - Crashes (NSMBW) [UNUSED]" notes="Crashes the game. Tries to load 'lift_turi_ashiba.szs' but that file does not exist. A fully solid, airship style platform that moves down when used with a bolt. Goes with sprite 360.">
+	 <list nybble="18" title="Width" comment="This determines the size of the platform.">
+                     <entry value="0">2 blocks wide</entry>
+                   <entry value="1">3 blocks wide</entry>
+                   <entry value="2">4 blocks wide</entry>
+                   <entry value="3">5 blocks wide</entry>
+                   <entry value="4">6 blocks wide</entry>
+                   <entry value="5">7 blocks wide</entry>
+                   <entry value="6">8 blocks wide</entry>
+                   <entry value="7">9 blocks wide</entry>
+                   <entry value="8">10 blocks wide</entry>
+                   <entry value="9">11 blocks wide</entry>
+                   <entry value="10">12 blocks wide</entry>
+                   <entry value="11">13 blocks wide</entry>
+                   <entry value="12">14 blocks wide</entry>
+                   <entry value="13">15 blocks wide</entry>
+                   <entry value="14">16 blocks wide</entry>
+                   <entry value="15">17 blocks wide</entry>
+           </list>
+		<list nybble="16" title="Speed" comment="Carry over from sprite 530">
+			<entry value="0">1.0</entry>
+			<entry value="1">1.5</entry>
+			<entry value="2">2.0</entry>
+			<entry value="3">3.0</entry>
+			<entry value="4">4.0</entry>
+			<entry value="5">1.0</entry>
+			<entry value="6">1.0</entry>
+			<entry value="7">1.0</entry>
+		</list>
+		<value nybble="21-22" title="Bolt ID" comment="Bolt ID for sprite"/>
+	 </sprite>
+	 <sprite id="360" name="Bolt-controlled Airship Platform Wire - Crashes (NSMBW) [UNUSED]" notes="Crashes the game. Tries to load 'lift_turi_ashiba_wire.szs' but that file does not exist. A non-solid, airship style metal wire that extends upwards 16 blocks. Moves down when used with a bolt. Goes on top of sprite 358.">
+		<list nybble="16" title="Speed" comment="Carry over from sprite 530">
+			<entry value="0">1.0</entry>
+			<entry value="1">1.5</entry>
+			<entry value="2">2.0</entry>
+			<entry value="3">3.0</entry>
+			<entry value="4">4.0</entry>
+			<entry value="5">1.0</entry>
+			<entry value="6">1.0</entry>
+			<entry value="7">1.0</entry>
+		</list>
+		<value nybble="21-22" title="Bolt ID" comment="Bolt ID for sprite"/>
+	 </sprite>
+	 <sprite id="202" name="Propeller Block (NSMBW) (CRASHES) [UNUSED]" notes="A block that went unused in this game, and lacks a model. Crashes because block_fly.szs does not exist."/>
+	<sprite id="203" name="Portable Ice Block (NSMBW) [UNUSED]" notes="Works. Uses the same model as the gravity-affected ice blocks.">
+		<checkbox nybble="10" title="Frozen Coin" comment="If checked, the ice block will have a coin frozen inside. (A bit glitchy when holding...)"/>
+	</sprite>
+	<sprite id="267" name="Giant Koopa Shell Cave (NSMBW) (CRASHES) [UNUSED]" notes="Crashes the game. Tries to load 'big_shell.szs' but that file does not exist."/>
+	<sprite id="177" name="4-Way Cannon - Crashes (NSMBW) [UNUSED]" notes="The files it tries to load don't exist."/>
+	<sprite id="178" name="Giant 4-Way Cannon - Crashes (NSMBW) [UNUSED]" notes="Files it tries to load don't exist."/>
+</sprites>
