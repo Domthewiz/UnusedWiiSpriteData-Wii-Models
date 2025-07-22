@@ -3,7 +3,7 @@ A patch for the [Miyamoto! NSMBU level editor](https://github.com/aboood40091/Mi
 
 New actor files for sprites 358 and 360.!!!
 <br><br>
-<img width="1418" height="572" alt="image" src="https://github.com/user-attachments/assets/edaa3cd8-2688-4981-84d2-65d9c06a36b2" />
+<img width="1351" height="1061" alt="e5cc3ca1-884f-4e8c-87a1-63a8e7b86124" src="https://github.com/user-attachments/assets/07ad4d2c-fc29-4668-90fa-3670bdb755ee" />
 <br>
 <img width="522" height="273" alt="image" src="https://github.com/user-attachments/assets/1e3c6689-7dc1-40bd-b50e-8f0efa923de8" />
 <br>
