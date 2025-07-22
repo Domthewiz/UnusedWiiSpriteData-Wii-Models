@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <sprites>
+
 <sprite id="319" name="Move-when-on Metal Block [UNUSED]" notes="A tall block with a lava glow underneath it that will move at any point when a specified number of 'passengers' (players + enemies) are standing on it, then goes back to the original position.">
        <list nybble="18" title="Size" comment="This determines the size of the block.">
                      <entry value="0">Small</entry>
@@ -83,4 +84,20 @@
 	<sprite id="267" name="Giant Koopa Shell Cave (NSMBW) (CRASHES) [UNUSED]" notes="Crashes the game. Tries to load 'big_shell.szs' but that file does not exist."/>
 	<sprite id="177" name="4-Way Cannon - Crashes (NSMBW) [UNUSED]" notes="The files it tries to load don't exist."/>
 	<sprite id="178" name="Giant 4-Way Cannon - Crashes (NSMBW) [UNUSED]" notes="Files it tries to load don't exist."/>
+	<sprite id="377" name="Vertical Block Platform with Light Gem - Crashes [USUSED] (NSMBW)" notes="A 2x3 solid platform that has a light gem in the shape of a downward arrow. This block can crush the player so be careful!">
+		<value nybble="13" title="Return delay" comment="Unknown unit. Experiment and report your findings"/>
+		<value nybble="14" title="Begin delay" comment="Unknown unit. Experiment and report your findings"/>
+		<checkbox nybble="23" title="Place behind other sprites" comment="You know what it does."/>
+		<value nybble="15" title="Distance" comment="Moving distance"/>
+		<list nybble="16" title="Speed" comment="How fast it moves">
+                 <entry value="0">1.0</entry>
+                 <entry value="1">2.0</entry>
+                 <entry value="2">3.0</entry>
+                 <entry value="3">4.0</entry>
+             </list>
+		<list nybble="6" title="Direction" comment="This determines which direction the block will move.">
+                 <entry value="0">Up</entry>
+                 <entry value="1">Down</entry>
+             </list>
+	</sprite>
 </sprites>
