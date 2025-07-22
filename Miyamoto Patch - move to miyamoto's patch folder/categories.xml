@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<views>
+  <view name="Fixed Crashers">
+    <category name="Fixed sprites">
+      <attach sprite="199"/>
+      <attach sprite="202"/>
+      <attach sprite="267"/>
+      <attach sprite="345"/>
+      <attach sprite="319"/>
+      <attach sprite="529"/>
+      <attach sprite="360"/>
+      <attach sprite="358"/>
+      <attach sprite="522"/>
+    </category>
+  </view>
+</views>
