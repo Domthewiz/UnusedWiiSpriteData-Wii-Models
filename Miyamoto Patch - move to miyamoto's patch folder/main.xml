@@ -8,5 +8,6 @@
     <!-- Files -->
     <!-- <file name="sprites" path="sprites.py" /> not needed atm but will be useful later -->
     <file name="spritedata" path="spritedata.xml" />
+	<file name="spritecategories" path="categories.xml" />
 
 </game>
