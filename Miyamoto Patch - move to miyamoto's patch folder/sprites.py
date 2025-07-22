@@ -68,6 +68,54 @@ class SpriteImage_Crowber(SLib.SpriteImage_Static):  # 724
 
     def loadImages():
         SLib.loadIfNotInImageCache('crowbere', 'crowber.png')
+        
+class SpriteImage_KoopaCave(SLib.SpriteImage_Static):  # 724
+    def __init__(self, parent):
+        super().__init__(
+            parent,
+            3.75,
+            ImageCache['koopac'],
+            (-112, -160),
+        )
+
+    def loadImages():
+        SLib.loadIfNotInImageCache('koopac', 'koopa_cave.png')
+        
+class SpriteImage_Metealbox(SLib.SpriteImage_Static):  # 724
+    def __init__(self, parent):
+        super().__init__(
+            parent,
+            3.75,
+        )
+
+    def loadImages():
+        SLib.loadIfNotInImageCache('teeny', 'teeny_lift.png')
+        SLib.loadIfNotInImageCache('small', 'small_lift.png')
+        SLib.loadIfNotInImageCache('big', 'big_lift.png')
+        
+    def dataChanged(self):
+        style = self.parent.spritedata[8] & 0xF
+         
+        if style == 0:
+            self.image = ImageCache['teeny']
+
+            self.xOffset = 0
+            self.yOffset = 0   
+            
+        elif style == 1:
+            self.image = ImageCache['small']
+
+            self.xOffset = 0
+            self.yOffset = 0   
+
+        else:
+            self.image = ImageCache['big']
+
+            self.xOffset = 0
+            self.yOffset = 0
+         
+        super().dataChanged()
+        
 class SpriteImage_LiftTaru(SLib.SpriteImage_Static):  # 724
     def __init__(self, parent):
         super().__init__(
@@ -233,5 +281,7 @@ ImageClasses = {
     202: SpriteImage_PropellerBlock,
     529: SpriteImage_Crowber,
     199: SpriteImage_GlwBlock,
-    522: SpriteImage_LiftTaru
+    522: SpriteImage_LiftTaru,
+    319: SpriteImage_Metealbox,
+    267: SpriteImage_KoopaCave
 }
