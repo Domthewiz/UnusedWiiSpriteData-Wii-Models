@@ -10,6 +10,9 @@ import spritelib as SLib
 
 ImageCache = SLib.ImageCache
 
+# Global varible for rotations.
+Rotations = [0, 0, 0]
+StoneRotation = 0
 
 class SpriteImage_ActrSpawner(SLib.SpriteImage_Static):  # 724
     def __init__(self, parent):
@@ -34,6 +37,7 @@ class SpriteImage_TiltGirder(SLib.SpriteImage_Static):  # 724
     def loadImages():
         SLib.loadIfNotInImageCache('girder', 'tilt_girder.png')
         
+
 class SpriteImage_LightGem(SLib.SpriteImage_Static):  # 724
     def __init__(self, parent):
         super().__init__(
@@ -45,6 +49,27 @@ class SpriteImage_LightGem(SLib.SpriteImage_Static):  # 724
 
     def loadImages():
         SLib.loadIfNotInImageCache('lightgem', 'light_gem.png')
+
+class SpriteImage_CubeM(SLib.SpriteImage_StaticMultiple):  # 539
+    def __init__(self, parent):
+        super().__init__(
+            parent,
+            3.75,
+        )
+
+    @staticmethod
+    def loadImages():
+        SLib.loadIfNotInImageCache('cubem', 'cube_kinoko_M.png')
+
+    def dataChanged(self):
+        width = (self.parent.spritedata[8] & 0xF) + 1
+        height = (self.parent.spritedata[9] & 0xF) + 1
+
+        self.image = ImageCache['cubem'].scaled(width * 60, height * 60)
+        self.yOffset = 0
+
+        super().dataChanged()
+
 
 class SpriteImage_PropellerBlock(SLib.SpriteImage_Static):  # 724
     def __init__(self, parent):
@@ -297,5 +322,6 @@ ImageClasses = {
     522: SpriteImage_LiftTaru,
     319: SpriteImage_Metealbox,
     267: SpriteImage_KoopaCave,
-    377: SpriteImage_LightGem
+    377: SpriteImage_LightGem,
+    312: SpriteImage_CubeM,
 }
