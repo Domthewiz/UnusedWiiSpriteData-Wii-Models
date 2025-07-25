@@ -33,7 +33,7 @@
              </list>
          <value nybble="16" title="Speed" comment="This determines how quickly the block will move while moving."/>
      </sprite>
-	 <sprite id="358" name="Bolt-controlled Airship Platform - Crashes (NSMBW) [UNUSED]" notes="Crashes the game. Tries to load 'lift_turi_ashiba.szs' but that file does not exist. A fully solid, airship style platform that moves down when used with a bolt. Goes with sprite 360.">
+	 <sprite id="358" name="Bolt-controlled Airship Platform - [UNUSED]" notes="Crashes the game. Tries to load 'lift_turi_ashiba.szs' but that file does not exist. A fully solid, airship style platform that moves down when used with a bolt. Goes with sprite 360.">
 	 <list nybble="18" title="Width" comment="This determines the size of the platform.">
                      <entry value="0">2 blocks wide</entry>
                    <entry value="1">3 blocks wide</entry>
@@ -64,7 +64,7 @@
 		</list>
 		<value nybble="21-22" title="Bolt ID" comment="Bolt ID for sprite"/>
 	 </sprite>
-	 <sprite id="360" name="Bolt-controlled Airship Platform Wire - Crashes (NSMBW) [UNUSED]" notes="Crashes the game. Tries to load 'lift_turi_ashiba_wire.szs' but that file does not exist. A non-solid, airship style metal wire that extends upwards 16 blocks. Moves down when used with a bolt. Goes on top of sprite 358.">
+	 <sprite id="360" name="Bolt-controlled Airship Platform Wire - [UNUSED]" notes="Crashes the game. Tries to load 'lift_turi_ashiba_wire.szs' but that file does not exist. A non-solid, airship style metal wire that extends upwards 16 blocks. Moves down when used with a bolt. Goes on top of sprite 358.">
 		<list nybble="16" title="Speed" comment="Carry over from sprite 530">
 			<entry value="0">1.0</entry>
 			<entry value="1">1.5</entry>
@@ -77,27 +77,56 @@
 		</list>
 		<value nybble="21-22" title="Bolt ID" comment="Bolt ID for sprite"/>
 	 </sprite>
-	 <sprite id="202" name="Propeller Block (NSMBW) (CRASHES) [UNUSED]" notes="A block that went unused in this game, and lacks a model. Crashes because block_fly.szs does not exist."/>
+	 <sprite id="202" name="Propeller Block [UNUSED]" notes="A block that went unused in this game, and lacks a model. Crashes because block_fly.szs does not exist."/>
 	<sprite id="203" name="Portable Ice Block (NSMBW) [UNUSED]" notes="Works. Uses the same model as the gravity-affected ice blocks.">
 		<checkbox nybble="10" title="Frozen Coin" comment="If checked, the ice block will have a coin frozen inside. (A bit glitchy when holding...)"/>
 	</sprite>
-	<sprite id="267" name="Giant Koopa Shell Cave (NSMBW) (CRASHES) [UNUSED]" notes="Crashes the game. Tries to load 'big_shell.szs' but that file does not exist."/>
+	<sprite id="267" name="Giant Koopa Shell Cave (NSMBW) [UNUSED]" notes="A giant koop shell that was featured in NSMBW. The grass and the shell can turn black randomly. It;s somewhat inconsitstent."/>
 	<sprite id="177" name="4-Way Cannon - Crashes (NSMBW) [UNUSED]" notes="The files it tries to load don't exist."/>
 	<sprite id="178" name="Giant 4-Way Cannon - Crashes (NSMBW) [UNUSED]" notes="Files it tries to load don't exist."/>
-	<sprite id="377" name="Vertical Block Platform with Light Gem - Crashes [USUSED] (NSMBW)" notes="A 2x3 solid platform that has a light gem in the shape of a downward arrow. This block can crush the player so be careful!">
+	<sprite id="377" name="Vertical Block Platform with Light Gem - [USUSED] (NSMBW)" notes="A 2x3 solid platform that has a light gem in the shape of a downward arrow. This block can crush the player so be careful!">
 		<value nybble="13" title="Return delay" comment="Unknown unit. Experiment and report your findings"/>
 		<value nybble="14" title="Begin delay" comment="Unknown unit. Experiment and report your findings"/>
-		<checkbox nybble="23" title="Place behind other sprites" comment="You know what it does."/>
+		<value nybble="23" title="Z-order???" comment="Unknown"/>
 		<value nybble="15" title="Distance" comment="Moving distance"/>
-		<list nybble="16" title="Speed" comment="How fast it moves">
+		<list nybble="16" title="Speed" comment="Speeds are inconsistent">
                  <entry value="0">1.0</entry>
-                 <entry value="1">2.0</entry>
-                 <entry value="2">3.0</entry>
-                 <entry value="3">4.0</entry>
+                 <entry value="1">1.5?</entry>
+                 <entry value="2">2.0?</entry>
+                 <entry value="3">3.0?</entry>
              </list>
 		<list nybble="6" title="Direction" comment="This determines which direction the block will move.">
                  <entry value="0">Up</entry>
                  <entry value="1">Down</entry>
              </list>
+	</sprite>
+	<sprite id="529" name="Crowber [UNUSED]" notes="Purple bird enemy that turns around twice before swooping down at the player."/>
+	<sprite id="312" name="Rotating Mushroom Block - Uses Lines - (NSMBW) [UNUSED]" notes="Crashes due to missing 'cube_kinoko.szs' file. Also fails to load the model 'cube_kinoko_M'. This is a leftover from NSMBW that has code present, but the model is missing.">
+		<list nybble="5" title="Starting Rotation" comment="Starting rotation, Tilt center is at the screw of the mushroom block">
+			<entry value="0">0&#xB0;</entry>
+			<entry value="1">22.5&#xB0;</entry>
+			<entry value="2">45&#xB0;</entry>
+			<entry value="3">67.5&#xB0;</entry>
+			<entry value="4">90&#xB0;</entry>
+			<entry value="5">112.5&#xB0;</entry>
+			<entry value="6">135&#xB0;</entry>
+			<entry value="7">157.5&#xB0;</entry>
+			<entry value="8">180&#xB0;</entry>
+			<entry value="9">202.5&#xB0;</entry>
+			<entry value="10">225&#xB0;</entry>
+			<entry value="11">247.5&#xB0;</entry>
+			<entry value="12">270&#xB0;</entry>
+			<entry value="13">292.5&#xB0;</entry>
+			<entry value="14">315&#xB0;</entry>
+			<entry value="15">337.5&#xB0;</entry>
+		</list>
+		<checkbox nybble="8" title="Bounces Back" comment="When checked, Mushroom block will turn around at line endings."/>
+		<value nybble="9" title="Rotation Speed" comment="Unknown unit, report on findings!"/>
+		<checkbox nybble="10" title="Moves Left" comment="When checked, the block will move to the left instead of the right"/>
+		<checkbox nybble="11" title="Moves Without Player" comment="When checked, the block will not require a player to stand on it before moving."/>
+		<checkbox nybble="12" title="Counter-clockwise" comment="When checked, the block will rotate counter-clockwise"/>
+		<value nybble="16" title="Line Speed" comment="Unknown unit, report on findings!"/>
+		<value nybble="18" title="Default is 7 - Width" comment="Width of mushroom block"/>
+		<value nybble="20" title="Default is 7 - Height" comment="Height of mushoom block"/>
 	</sprite>
 </sprites>
