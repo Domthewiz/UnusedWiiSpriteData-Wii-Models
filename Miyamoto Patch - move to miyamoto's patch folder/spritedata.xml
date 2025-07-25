@@ -120,9 +120,12 @@
 			<entry value="14">315&#xB0;</entry>
 			<entry value="15">337.5&#xB0;</entry>
 		</list>
-		<checkbox nybble="8" title="Bounces Back" comment="When checked, Mushroom block will turn around at line endings."/>
+		<checkbox nybble="8" title="Bounces Back" comment="When checked, Mushroom block will not stop at line endings."/>
 		<value nybble="9" title="Rotation Speed" comment="Unknown unit, report on findings!"/>
-		<checkbox nybble="10" title="Moves Left" comment="When checked, the block will move to the left instead of the right"/>
+		<list nybble="10" title="Starts moving" comment="Direction the block will first move.">
+			<entry value="0">Right / Up</entry>
+			<entry value="1">Left / Down</entry>
+		</list>
 		<checkbox nybble="11" title="Moves Without Player" comment="When checked, the block will not require a player to stand on it before moving."/>
 		<checkbox nybble="12" title="Counter-clockwise" comment="When checked, the block will rotate counter-clockwise"/>
 		<value nybble="16" title="Line Speed" comment="Unknown unit, report on findings!"/>
