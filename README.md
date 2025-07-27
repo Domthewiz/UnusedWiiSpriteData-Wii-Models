@@ -2,7 +2,10 @@
 A patch for the [Miyamoto! NSMBU level editor](https://github.com/aboood40091/Miyamoto) that adds on to the unused wii actors.
 
 New actor files for sprites 358 and 360.!!!
-New actor files for sprites 337 and 312.!!!
+New actor files for sprites 337 .!!!
+
+SPRITE 312 REQUIRES TSURU FOR SOME REASON IDK WHY
+
 <br><br>
 <img width="1806" height="1182" alt="image" src="https://github.com/user-attachments/assets/727dde83-fa2e-4b9a-b263-d6190791a4ef" />
 <br>
