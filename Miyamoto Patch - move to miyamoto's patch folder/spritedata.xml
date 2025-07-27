@@ -137,4 +137,9 @@
         	<checkbox nybble="5" title="Large"/>
         	<value nybble="21-22" title="Movement ID"/>
 	</sprite>
+	<sprite id="189" name="Lakitu Block (CRASHES) (NSMBW) [UNUSED]">
+		<value nybble="12" title="Lakitu Height"/>
+		<checkbox nybble="13" title="Crashes"/>
+		<value nybble="14" title="Approx coins + 1 coin thrown before 1-up"/>
+	</sprite>
 </sprites>
