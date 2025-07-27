@@ -312,6 +312,35 @@ class SpriteImage_FakeActor(SLib.SpriteImage_Static):  # 727
 
         super().dataChanged()
 
+class SpriteImage_RotoDisc(SLib.SpriteImage_PivotRotationControlled):  # 96
+    def __init__(self, parent):
+        super().__init__(
+            parent,
+            3.75,
+        )
+
+        self.aux.append(SLib.AuxiliaryImage(parent, 1, 1))
+
+    @staticmethod
+    def loadImages():
+        SLib.loadIfNotInImageCache('roto_disc_small', 'roto_disc_small.png')
+        SLib.loadIfNotInImageCache('roto_disc_large', 'roto_disc_large.png')
+
+    def dataChanged(self):
+
+        self.affectImage = 1 != 1
+
+        if self.parent.spritedata[2] >> 4 & 1:
+            self.dimensions = (-8, -16, 32, 32)
+            self.aux[0].setImage(ImageCache['roto_disc_large'], 0, 0)
+
+        else:
+            self.dimensions = (0, 0, 16, 16)
+            self.aux[0].setImage(ImageCache['roto_disc_small'], 0, 0)
+
+        super().dataChanged()
+
+
 ImageClasses = {
     360: SpriteImage_ActrSpawner,
     358: SpriteImage_FakeActor,
@@ -324,4 +353,5 @@ ImageClasses = {
     267: SpriteImage_KoopaCave,
     377: SpriteImage_LightGem,
     312: SpriteImage_CubeM,
+    538: SpriteImage_RotoDisc,
 }
