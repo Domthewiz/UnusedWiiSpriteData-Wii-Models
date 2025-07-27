@@ -101,7 +101,7 @@
              </list>
 	</sprite>
 	<sprite id="529" name="Crowber [UNUSED]" notes="Purple bird enemy that turns around twice before swooping down at the player."/>
-	<sprite id="312" name="Rotating Mushroom Block - Uses Lines - (NSMBW) [UNUSED]" notes="Crashes due to missing 'cube_kinoko.szs' file. Also fails to load the model 'cube_kinoko_M'. This is a leftover from NSMBW that has code present, but the model is missing.">
+	<sprite id="312" name="Rotating Mushroom Block - Uses Lines - REQUIRES TSURU - (NSMBW) [UNUSED]" notes="Crashes due to missing 'cube_kinoko.szs' file. Also fails to load the model 'cube_kinoko_M'. This is a leftover from NSMBW that has code present, but the model is missing.">
 		<value nybble="3-4" title="Target Event ID" comment="Event ID that will be triggered once player steps on block."/>
 		<list nybble="5" title="Starting Rotation" comment="Starting rotation, Tilt center is at the screw of the mushroom block">
 			<entry value="0">0&#xB0;</entry>
@@ -132,5 +132,9 @@
 		<value nybble="16" title="Line Speed" comment="Unknown unit, report on findings!"/>
 		<value nybble="18" title="Default is 7 - Width" comment="Width of mushroom block"/>
 		<value nybble="20" title="Default is 7 - Height" comment="Height of mushoom block"/>
+	</sprite>
+	<sprite id="538" name="Pivotal-rotation-controlled SMB3 Roto-disc (CRASHES) [UNUSED]">
+        	<checkbox nybble="5" title="Large"/>
+        	<value nybble="21-22" title="Movement ID"/>
 	</sprite>
 </sprites>
