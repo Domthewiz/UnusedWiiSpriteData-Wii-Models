@@ -118,6 +118,18 @@ class SpriteImage_KoopaCave(SLib.SpriteImage_Static):  # 724
 
     def loadImages():
         SLib.loadIfNotInImageCache('koopac', 'koopa_cave.png')
+
+class SpriteImage_LakituBlock(SLib.SpriteImage_Static):  # 724
+    def __init__(self, parent):
+        super().__init__(
+            parent,
+            3.75,
+            ImageCache['lakbloc'],
+            (-4, -8),
+        )
+
+    def loadImages():
+        SLib.loadIfNotInImageCache('lakbloc', 'block_cloud.png')
         
 class SpriteImage_Metealbox(SLib.SpriteImage_Static):  # 724
     def __init__(self, parent):
@@ -354,4 +366,5 @@ ImageClasses = {
     377: SpriteImage_LightGem,
     312: SpriteImage_CubeM,
     538: SpriteImage_RotoDisc,
+    189: SpriteImage_LakituBlock,
 }
