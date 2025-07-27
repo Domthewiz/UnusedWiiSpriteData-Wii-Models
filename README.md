@@ -7,9 +7,7 @@ New actor files for sprites 337 .!!!
 SPRITE 312 REQUIRES TSURU FOR SOME REASON IDK WHY
 
 <br><br>
-<img width="1806" height="1182" alt="image" src="https://github.com/user-attachments/assets/727dde83-fa2e-4b9a-b263-d6190791a4ef" />
-<br>
-<img width="1351" height="1061" alt="e5cc3ca1-884f-4e8c-87a1-63a8e7b86124" src="https://github.com/user-attachments/assets/07ad4d2c-fc29-4668-90fa-3670bdb755ee" />
+<img width="1467" height="987" alt="image" src="https://github.com/user-attachments/assets/ac76f9b6-6cb1-43a4-8ebe-f6b3dfe0794e" />
 <br>
 <img width="522" height="273" alt="image" src="https://github.com/user-attachments/assets/1e3c6689-7dc1-40bd-b50e-8f0efa923de8" />
 <br>
