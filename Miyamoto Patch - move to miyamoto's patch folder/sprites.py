@@ -325,6 +325,7 @@ class SpriteImage_FakeActor(SLib.SpriteImage_Static):  # 727
         super().dataChanged()
 
 class SpriteImage_RotoDisc(SLib.SpriteImage_PivotRotationControlled):  # 96
+    affectImage = affectAUXImage = False
     def __init__(self, parent):
         super().__init__(
             parent,
