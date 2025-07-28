@@ -1,11 +1,10 @@
 # UnusedWiiSpriteData-Wii-Models
 A patch for the [Miyamoto! NSMBU level editor](https://github.com/aboood40091/Miyamoto) that adds on to the unused wii actors.
-
-New actor files for sprites 358 and 360.!!!
-New actor files for sprites 337 .!!!
-
-SPRITE 312 REQUIRES TSURU FOR SOME REASON IDK WHY
-
+# Use
+The most recent version of this patch can be found in releases.
+If you want all of the actors, you must patch your NSMBU US or EU 1.3.0 RPX file with a tsuru fork. Patch it using Trailblazer. ( Patch by Arulo )
+Move the actor file to NSMBU's "Actor folder"
+Miyamoto! patch is optional
 <br><br>
 <img width="1467" height="987" alt="image" src="https://github.com/user-attachments/assets/ac76f9b6-6cb1-43a4-8ebe-f6b3dfe0794e" />
 <br>
