@@ -1,6 +1,6 @@
 # UnusedWiiSpriteData-Wii-Models
 A patch for the [Miyamoto! NSMBU level editor](https://github.com/aboood40091/Miyamoto) that adds on to the unused wii actors.
-# Use - Get from releases
+# How to Use - Get from releases
 <br><br>
 <img width="1467" height="987" alt="image" src="https://github.com/user-attachments/assets/ac76f9b6-6cb1-43a4-8ebe-f6b3dfe0794e" />
 <br>
